@@ -18,12 +18,12 @@ const Hero = () => {
           className="h-40 w-auto mx-auto mb-12"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6">
-          Building the Future with
-          <span className="block mt-2">AI-Powered Software</span>
+          AI Apps for
+          <span className="block mt-2">Everyone</span>
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-          We craft intelligent solutions that transform ideas into reality.
-          Italian roots, American vision, global impact.
+          We build smart, intuitive apps powered by artificial intelligence.
+          Designed for real people, crafted with Italian creativity.
         </p>
         <button
           onClick={scrollToContact}
