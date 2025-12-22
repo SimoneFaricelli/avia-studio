@@ -1,4 +1,4 @@
-import logoFull from "@/assets/logo-full.png";
+import banner from "@/assets/banner.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -11,11 +11,11 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex flex-col items-center justify-center px-6 pt-20"
     >
-      <div className="text-center max-w-3xl mx-auto animate-fade-in">
+      <div className="text-center max-w-4xl mx-auto animate-fade-in">
         <img
-          src={logoFull}
+          src={banner}
           alt="AVIA Studio"
-          className="h-40 w-auto mx-auto mb-12"
+          className="w-full max-w-2xl mx-auto mb-12"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6">
           AI Apps for
