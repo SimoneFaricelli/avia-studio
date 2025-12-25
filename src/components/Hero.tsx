@@ -1,4 +1,5 @@
-import banner from "@/assets/banner.png";
+import bannerDark from "@/assets/banner.png";
+import bannerLight from "@/assets/banner-light.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Hero = () => {
@@ -25,9 +26,14 @@ const Hero = () => {
           }`}
         >
           <img
-            src={banner}
+            src={bannerLight}
             alt="AVIA Studio"
-            className="w-full max-w-2xl mx-auto mb-12"
+            className="w-full max-w-2xl mx-auto mb-12 dark:hidden"
+          />
+          <img
+            src={bannerDark}
+            alt="AVIA Studio"
+            className="w-full max-w-2xl mx-auto mb-12 hidden dark:block"
           />
         </div>
         <h1
