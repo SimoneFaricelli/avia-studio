@@ -4,10 +4,10 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-32 px-6">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-6 animate-fade-in">
           Get in Touch
         </h2>
-        <p className="text-muted-foreground text-center max-w-xl mx-auto mb-16">
+        <p className="text-muted-foreground text-center max-w-xl mx-auto mb-16 animate-fade-in [animation-delay:200ms]">
           Have an idea for an app? Want to collaborate? We'd love to hear from
           you.
         </p>
@@ -15,7 +15,7 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <a
             href="mailto:contact@aviastudio.com"
-            className="group p-8 bg-secondary/50 rounded-xl border border-border hover:bg-secondary transition-colors"
+            className="group p-8 bg-secondary/50 rounded-xl border border-border hover:bg-secondary transition-all hover:scale-105 animate-fade-in [animation-delay:400ms]"
           >
             <div className="flex items-center justify-between mb-4">
               <Mail className="h-6 w-6 text-foreground" />
@@ -27,7 +27,7 @@ const ContactSection = () => {
             </p>
           </a>
 
-          <div className="p-8 bg-secondary/50 rounded-xl border border-border">
+          <div className="p-8 bg-secondary/50 rounded-xl border border-border animate-fade-in [animation-delay:600ms] hover:scale-105 transition-transform">
             <div className="flex items-center justify-between mb-4">
               <MapPin className="h-6 w-6 text-foreground" />
             </div>

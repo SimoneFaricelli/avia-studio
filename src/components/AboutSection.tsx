@@ -2,12 +2,12 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-32 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-16 animate-fade-in">
           About Us
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-fade-in [animation-delay:200ms]">
             <h3 className="text-xl font-semibold text-foreground">Our Story</h3>
             <p className="text-muted-foreground leading-relaxed">
               AVIA STUDIO was born from a bold vision: to make AI accessible to
@@ -23,7 +23,7 @@ const AboutSection = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="p-6 bg-background rounded-xl border border-border">
+            <div className="p-6 bg-background rounded-xl border border-border animate-fade-in [animation-delay:400ms] hover:scale-105 transition-transform">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                   CEO
@@ -44,7 +44,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="p-6 bg-background rounded-xl border border-border">
+            <div className="p-6 bg-background rounded-xl border border-border animate-fade-in [animation-delay:600ms] hover:scale-105 transition-transform">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold">
                   COO
