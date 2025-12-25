@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="container mx-auto max-w-5xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img src={logoIcon} alt="AVIA Studio" className="h-6 w-6" />
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 animate-fade-in">
+          <div className="flex items-center gap-3 hover:scale-105 transition-transform">
+            <img src={logoIcon} alt="AVIA Studio" className="h-8 w-8" />
             <span className="text-sm font-medium text-foreground">
               AVIA STUDIO
             </span>
