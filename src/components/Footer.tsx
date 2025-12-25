@@ -1,4 +1,5 @@
-import logoIcon from "@/assets/logo-icon.png";
+import logoIconDark from "@/assets/logo-icon.png";
+import logoIconLight from "@/assets/logo-icon-light.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Footer = () => {
@@ -14,7 +15,8 @@ const Footer = () => {
           }`}
         >
           <div className="flex items-center gap-3 hover:scale-105 transition-transform">
-            <img src={logoIcon} alt="AVIA Studio" className="h-8 w-8" />
+            <img src={logoIconLight} alt="AVIA Studio" className="h-8 w-8 dark:hidden" />
+            <img src={logoIconDark} alt="AVIA Studio" className="h-8 w-8 hidden dark:block" />
             <span className="text-sm font-medium text-foreground">
               AVIA STUDIO
             </span>
