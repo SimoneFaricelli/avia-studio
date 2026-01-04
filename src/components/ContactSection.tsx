@@ -31,7 +31,7 @@ const ContactSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <a
             ref={emailRef}
-            href="mailto:contact@aviastudio.com"
+            href="mailto:info@aviastudio.group"
             className={`group p-8 bg-secondary/50 rounded-xl border border-border hover:bg-secondary transition-all hover:scale-105 duration-700 delay-300 ${
               emailVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
@@ -42,7 +42,7 @@ const ContactSection = () => {
             </div>
             <h3 className="font-semibold text-foreground mb-2">Email Us</h3>
             <p className="text-muted-foreground text-sm">
-              contact@aviastudio.com
+              info@aviastudio.group
             </p>
           </a>
 
