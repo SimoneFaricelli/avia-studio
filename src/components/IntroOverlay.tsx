@@ -26,21 +26,27 @@ const IntroOverlay = ({ onEnter }: IntroOverlayProps) => {
   }, []);
 
   const handleEnter = () => {
-    if (clickedRef.current) return;
-    clickedRef.current = true;
-    setEntering(true);
-    setTimeout(() => setFaded(true), 650);
-    setTimeout(() => {
-      setHidden(true);
-      onEnter();
-    }, 1350);
-  };
+  if (clickedRef.current) return;
+  clickedRef.current = true;
 
-  if (hidden) return null;
+  setEntering(true);
+
+  // attiva fade
+  setTimeout(() => {
+    setFaded(true);
+  }, 600);
+
+  // DOPO il fade, mostra il sito sotto
+  setTimeout(() => {
+    onEnter();
+  }, 900);
+};
+
+
 
   return (
     <div
-      className="intro-root"
+      className={`intro-root ${faded ? "fade-out" : ""}`}
       onClick={handleEnter}
       onTouchStart={handleEnter}
       role="button"
@@ -208,6 +214,15 @@ const IntroOverlay = ({ onEnter }: IntroOverlayProps) => {
           .intro-logo-wrap{width:235px;height:175px;}
           .intro-brand{font-size:26px;letter-spacing:8px;}
           .intro-enter{font-size:10px;letter-spacing:4px;}
+        
+        }
+        .intro-root {
+          transition: opacity 0.8s ease;
+        }
+
+        .intro-root.fade-out {
+          opacity: 0;
+          pointer-events: none;
         }
       `}</style>
     </div>
