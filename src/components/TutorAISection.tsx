@@ -14,7 +14,7 @@ import {
   Plus,
   Minus,
 } from "lucide-react";
-import assessmentAsset from "@/assets/tutor-enterprise/assessment.png";
+// import assessmentAsset from "@/assets/tutor-enterprise/assessment.png";
 import lessonAsset from "@/assets/tutor-enterprise/lesson.png";
 import dashboardAsset from "@/assets/tutor-enterprise/dashboard.png";
 
@@ -216,7 +216,7 @@ const TutorAISection = () => {
           <div className="lg:col-span-6">
             <div className="rounded-2xl overflow-hidden"
               style={{ border: "1px solid rgba(255,255,255,0.10)", boxShadow: "0 30px 80px -30px rgba(0,0,0,0.6)", background: "rgba(255,255,255,0.02)" }}>
-              <img src={assessmentAsset} alt="Tutor AI Enterprise — Skill Assessment" className="w-full h-auto block" />
+              <img src={lessonAssetAsset} alt="Tutor AI Enterprise — Skill Assessment" className="w-full h-auto block" />
             </div>
           </div>
         </div>
