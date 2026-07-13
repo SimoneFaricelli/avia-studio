@@ -14,9 +14,9 @@ import {
   Plus,
   Minus,
 } from "lucide-react";
-import assessmentAsset from "@/assets/tutor-enterprise/assessment.png.asset.json";
-import lessonAsset from "@/assets/tutor-enterprise/lesson.png.asset.json";
-import dashboardAsset from "@/assets/tutor-enterprise/dashboard.png.asset.json";
+import assessmentAsset from "@/assets/tutor-enterprise/assessment.png";
+import lessonAsset from "@/assets/tutor-enterprise/lesson.png";
+import dashboardAsset from "@/assets/tutor-enterprise/dashboard.png";
 
 const NAVY = "#071522";
 const SECONDARY_BG = "#F6F7F8";
@@ -134,7 +134,7 @@ const EnterpriseContactForm = () => {
     const body = encodeURIComponent(
       `Full Name: ${form.name}\nBusiness Email: ${form.email}\nCompany: ${form.company}\nEmployees: ${form.employees}\nTraining Topic: ${form.topic}\nPreferred Language: ${form.language}\n\nMessage:\n${form.message}`
     );
-    window.location.href = `mailto:hello@aviastudio.group?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@aviastudio.group?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
   const field = { border: `1px solid ${BORDER}`, color: NAVY } as React.CSSProperties;
@@ -216,7 +216,7 @@ const TutorAISection = () => {
           <div className="lg:col-span-6">
             <div className="rounded-2xl overflow-hidden"
               style={{ border: "1px solid rgba(255,255,255,0.10)", boxShadow: "0 30px 80px -30px rgba(0,0,0,0.6)", background: "rgba(255,255,255,0.02)" }}>
-              <img src={assessmentAsset.url} alt="Tutor AI Enterprise — Skill Assessment" className="w-full h-auto block" />
+              <img src={assessmentAsset} alt="Tutor AI Enterprise — Skill Assessment" className="w-full h-auto block" />
             </div>
           </div>
         </div>
@@ -299,7 +299,7 @@ const TutorAISection = () => {
           </div>
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             <div className="rounded-2xl overflow-hidden order-2 lg:order-1" style={{ border: `1px solid ${BORDER}` }}>
-              <img src={lessonAsset.url} alt="Tutor AI Enterprise — Training Lesson with AI Tutor" className="w-full h-auto block" />
+              <img src={lessonAsset} alt="Tutor AI Enterprise — Training Lesson with AI Tutor" className="w-full h-auto block" />
             </div>
             <div className="order-1 lg:order-2">
               <ul className="space-y-5">
@@ -347,7 +347,7 @@ const TutorAISection = () => {
             </ul>
           </div>
           <div className="rounded-2xl overflow-hidden bg-white" style={{ border: `1px solid ${BORDER}` }}>
-            <img src={dashboardAsset.url} alt="Tutor AI Enterprise — Company Dashboard" className="w-full h-auto block" />
+            <img src={dashboardAsset} alt="Tutor AI Enterprise — Company Dashboard" className="w-full h-auto block" />
           </div>
         </div>
       </section>
@@ -421,12 +421,12 @@ const TutorAISection = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-5 mb-10">
-            <a href="mailto:hello@aviastudio.group" className="p-8 rounded-2xl bg-white transition-all hover:-translate-y-0.5 block" style={{ border: `1px solid ${BORDER}` }}>
+            <a href="mailto:info@aviastudio.group" className="p-8 rounded-2xl bg-white transition-all hover:-translate-y-0.5 block" style={{ border: `1px solid ${BORDER}` }}>
               <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style={{ backgroundColor: SECONDARY_BG, border: `1px solid ${BORDER}` }}>
                 <Mail className="w-5 h-5" style={{ color: NAVY }} strokeWidth={1.75} />
               </div>
               <div className="text-xs uppercase tracking-[0.14em] font-medium mb-1" style={{ color: "#6B7280" }}>Email</div>
-              <div className="text-lg font-medium" style={{ color: NAVY }}>hello@aviastudio.group</div>
+              <div className="text-lg font-medium" style={{ color: NAVY }}>info@aviastudio.group</div>
               <div className="text-sm mt-2" style={{ color: "#4A5460" }}>Business enquiries</div>
             </a>
             <button type="button" onClick={() => scrollToId("enterprise-form")} className="p-8 rounded-2xl bg-white text-left transition-all hover:-translate-y-0.5" style={{ border: `1px solid ${BORDER}` }}>
