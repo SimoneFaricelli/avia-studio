@@ -31,16 +31,19 @@ const PrimaryButton = ({
   onClick,
   dark = false,
   type = "button",
+  disabled = false,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
   dark?: boolean;
   type?: "button" | "submit";
+  disabled?: boolean;
 }) => (
   <button
     type={type}
     onClick={onClick}
-    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium tracking-tight transition-all hover:opacity-90 hover:-translate-y-0.5"
+    disabled={disabled}
+    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium tracking-tight transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
     style={{
       backgroundColor: dark ? "#ffffff" : NAVY,
       color: dark ? NAVY : "#ffffff",
@@ -125,17 +128,49 @@ const inputBase = "w-full px-4 py-3 rounded-xl bg-white text-[15px] transition-a
 
 const EnterpriseContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", company: "", employees: "", topic: "", language: "", message: "" });
   const update = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }));
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Tutor AI Enterprise — enquiry from ${form.company || form.name}`);
-    const body = encodeURIComponent(
-      `Full Name: ${form.name}\nBusiness Email: ${form.email}\nCompany: ${form.company}\nEmployees: ${form.employees}\nTraining Topic: ${form.topic}\nPreferred Language: ${form.language}\n\nMessage:\n${form.message}`
-    );
-    window.location.href = `mailto:info@aviastudio.group?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    const payload = {
+      _subject: `Tutor AI Enterprise - enquiry from ${form.company || form.name}`,
+      "Full Name": form.name,
+      "Business Email": form.email,
+      Company: form.company,
+      "Number of Employees": form.employees,
+      "Training Topic": form.topic || "Not specified",
+      "Preferred Language": form.language || "Not specified",
+      Message: form.message || "No message provided",
+    };
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@aviastudio.group", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+      if (!response.ok || data.success !== "true") {
+        throw new Error("Email submission failed");
+      }
+
+      setSubmitted(true);
+      setForm({ name: "", email: "", company: "", employees: "", topic: "", language: "", message: "" });
+    } catch {
+      setSubmitError("Unable to send right now. Please email us directly at info@aviastudio.group.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const field = { border: `1px solid ${BORDER}`, color: NAVY } as React.CSSProperties;
   const labelCls = "text-xs font-medium uppercase tracking-[0.12em] mb-2 block";
@@ -179,11 +214,11 @@ const EnterpriseContactForm = () => {
         </div>
       </div>
       <div className="mt-8 flex items-center justify-between gap-4 flex-wrap">
-        <p className="text-xs" style={{ color: "#7A8394" }}>
-          {submitted ? "Thanks — opening your email client…" : "We'll get back to you within 1 business day."}
+        <p className="text-xs" style={{ color: submitError ? "#B3261E" : "#7A8394" }}>
+          {submitError || (submitted ? "Thanks, your enquiry has been sent." : "We'll get back to you within 1 business day.")}
         </p>
-        <PrimaryButton type="submit">
-          Send Enquiry <ArrowRight className="w-4 h-4" />
+        <PrimaryButton type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Send Enquiry"} <ArrowRight className="w-4 h-4" />
         </PrimaryButton>
       </div>
     </form>
