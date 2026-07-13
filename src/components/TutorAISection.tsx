@@ -216,7 +216,7 @@ const TutorAISection = () => {
           <div className="lg:col-span-6">
             <div className="rounded-2xl overflow-hidden"
               style={{ border: "1px solid rgba(255,255,255,0.10)", boxShadow: "0 30px 80px -30px rgba(0,0,0,0.6)", background: "rgba(255,255,255,0.02)" }}>
-              <img src={lessonAssetAsset} alt="Tutor AI Enterprise — Skill Assessment" className="w-full h-auto block" />
+              <img src={lessonAsset} alt="Tutor AI Enterprise — Skill Assessment" className="w-full h-auto block" />
             </div>
           </div>
         </div>
