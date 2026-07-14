@@ -42,8 +42,8 @@ const Hero = () => {
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          AI Apps for
-          <span className="block mt-2">Everyone</span>
+          AI Solutions
+          <span className="block mt-2">Built for Business.</span>
         </h1>
         <p
           ref={textRef}
@@ -51,8 +51,8 @@ const Hero = () => {
             textVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          We build smart, intuitive apps powered by artificial intelligence.
-          Designed for real people, crafted with Italian creativity.
+          From enterprise training to intelligent automation, we build software
+          that helps organizations solve real problems and improve everyday operations.
         </p>
         <div
           ref={buttonRef}
