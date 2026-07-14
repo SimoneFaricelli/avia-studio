@@ -64,7 +64,7 @@ const Hero = () => {
             onClick={scrollToContact}
             className="px-8 py-4 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-all hover:scale-105"
           >
-            Get in Touch
+            Let's Talk
           </button>
         </div>
       </div>

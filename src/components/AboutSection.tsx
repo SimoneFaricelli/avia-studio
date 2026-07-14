@@ -27,15 +27,16 @@ const AboutSection = () => {
           >
             <h3 className="text-xl font-semibold text-foreground">Our Story</h3>
             <p className="text-muted-foreground leading-relaxed">
-              AVIA STUDIO was born from a bold vision: to make AI accessible to
-              everyone. Founded by a 16-year-old entrepreneur with Italian
-              heritage, we're building the next generation of consumer apps
-              powered by artificial intelligence.
+              AVIA STUDIO was born from a bold vision: build AI-powered
+              products that create real value for businesses. Founded by a
+              16-year-old entrepreneur with Italian heritage, we're building
+              the next generation of business software powered by artificial
+              intelligence.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              We create apps that simplify everyday life through smart
-              technology. No complexity, no jargon—just intuitive tools that
-              work for you.
+              We combine artificial intelligence, product thinking and
+              technical excellence to create tools that improve productivity,
+              automate processes and help teams achieve measurable results.
             </p>
           </div>
 

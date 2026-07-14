@@ -16,7 +16,7 @@ const ContactSection = () => {
             titleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Get in Touch
+          Let's Talk
         </h2>
         <p
           ref={subtitleRef}
@@ -24,8 +24,7 @@ const ContactSection = () => {
             subtitleVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Have an idea for an app? Want to collaborate? We'd love to hear from
-          you.
+          Looking for AI solutions that improve productivity and solve real business challenges? Let’s start the conversation.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -40,7 +39,7 @@ const ContactSection = () => {
               <Mail className="h-6 w-6 text-foreground" />
               <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             </div>
-            <h3 className="font-semibold text-foreground mb-2">Email Us</h3>
+            <h3 className="font-semibold text-foreground mb-2">Contact Us</h3>
             <p className="text-muted-foreground text-sm">
               info@aviastudio.group
             </p>
