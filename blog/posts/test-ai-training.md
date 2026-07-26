@@ -3,7 +3,7 @@ title: "Why AI Training Must Be Practical"
 description: "Why companies need AI training connected to employees' roles and everyday responsibilities."
 date: "2026-07-25"
 category: "AI Training"
-image: "public/blog/images/test-ai-training.jpg"
+image: "/images/test-ai-training.jpg"
 ---
 
 Companies are investing in artificial intelligence, but introducing new tools is not enough.
