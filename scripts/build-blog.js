@@ -27,6 +27,31 @@ const publicBlogDirectory = path.join(
   "blog"
 );
 
+const publicBlogImagesDirectory = path.join(
+  publicBlogDirectory,
+  "images"
+);
+
+const sourceBlogImagesDirectory = path.join(
+  rootDirectory,
+  "blog",
+  "images"
+);
+
+const sourceLogoLightPath = path.join(
+  rootDirectory,
+  "src",
+  "assets",
+  "logo-icon-light.png"
+);
+
+const sourceLogoDarkPath = path.join(
+  rootDirectory,
+  "src",
+  "assets",
+  "logo-icon.png"
+);
+
 const articlesDirectory = path.join(
   publicBlogDirectory,
   "articles"
@@ -123,6 +148,39 @@ if (!fs.existsSync(articlesDirectory)) {
   fs.mkdirSync(articlesDirectory, {
     recursive: true,
   });
+}
+
+if (!fs.existsSync(publicBlogImagesDirectory)) {
+  fs.mkdirSync(publicBlogImagesDirectory, {
+    recursive: true,
+  });
+}
+
+if (fs.existsSync(sourceBlogImagesDirectory)) {
+  const imageFiles = fs.readdirSync(sourceBlogImagesDirectory);
+
+  for (const imageFile of imageFiles) {
+    const sourcePath = path.join(sourceBlogImagesDirectory, imageFile);
+    const destinationPath = path.join(publicBlogImagesDirectory, imageFile);
+
+    if (fs.statSync(sourcePath).isFile()) {
+      fs.copyFileSync(sourcePath, destinationPath);
+    }
+  }
+}
+
+if (fs.existsSync(sourceLogoLightPath)) {
+  fs.copyFileSync(
+    sourceLogoLightPath,
+    path.join(publicBlogImagesDirectory, "logo-icon-light.png")
+  );
+}
+
+if (fs.existsSync(sourceLogoDarkPath)) {
+  fs.copyFileSync(
+    sourceLogoDarkPath,
+    path.join(publicBlogImagesDirectory, "logo-icon-dark.png")
+  );
 }
 
 if (!fs.existsSync(articleTemplatePath)) {
