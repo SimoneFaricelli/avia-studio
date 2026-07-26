@@ -46,6 +46,12 @@ const Header = () => {
           >
             Products
           </Link>
+          <a
+            href="/blog/"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </a>
           <button
             onClick={() => scrollToSection("contact")}
             className="hidden md:inline text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
