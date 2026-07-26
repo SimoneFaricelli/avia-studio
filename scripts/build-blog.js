@@ -21,9 +21,14 @@ const postsDirectory = path.join(
   "posts"
 );
 
-const articlesDirectory = path.join(
+const publicBlogDirectory = path.join(
   rootDirectory,
-  "blog",
+  "public",
+  "blog"
+);
+
+const articlesDirectory = path.join(
+  publicBlogDirectory,
   "articles"
 );
 
@@ -44,8 +49,7 @@ const indexTemplatePath = path.join(
 );
 
 const blogIndexPath = path.join(
-  rootDirectory,
-  "blog",
+  publicBlogDirectory,
   "index.html"
 );
 
@@ -123,13 +127,13 @@ if (!fs.existsSync(articlesDirectory)) {
 
 if (!fs.existsSync(articleTemplatePath)) {
   throw new Error(
-    "Missing blog/templates/article-template.html"
+    "Missing public/blog/templates/article-template.html"
   );
 }
 
 if (!fs.existsSync(indexTemplatePath)) {
   throw new Error(
-    "Missing blog/templates/index-template.html"
+    "Missing public/blog/templates/index-template.html"
   );
 }
 
@@ -243,7 +247,7 @@ const articleCards = articles
   .map((article) => {
     return `
       <article class="article-card">
-        <a href="/blog/articles/${article.slug}.html">
+        <a href="public/blog/articles/${article.slug}.html">
           <img
             src="${escapeHtml(article.image)}"
             alt="${escapeHtml(article.title)}"
