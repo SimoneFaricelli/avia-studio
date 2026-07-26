@@ -181,8 +181,8 @@ nav > div a:hover {
 
 .article-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
