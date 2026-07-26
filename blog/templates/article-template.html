@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{TITLE}} | AVIA STUDIO</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+
+  <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="/">AVIA STUDIO</a>
+
+      <div>
+        <a href="/">Home</a>
+        <a href="/product">Products</a>
+        <a href="/blog/">Insights</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="article-page">
+    <article>
+      <a href="/blog/" class="article-back">← Back to Insights</a>
+
+      <p class="article-category">{{CATEGORY}}</p>
+
+      <h1>{{TITLE}}</h1>
+
+      <p class="article-description">
+        {{DESCRIPTION}}
+      </p>
+
+      <div class="article-information">
+        <span>{{DATE}}</span>
+        <span>{{READ_TIME}}</span>
+      </div>
+
+      <img
+        class="article-cover"
+        src="{{IMAGE}}"
+        alt="{{TITLE}}"
+      >
+
+      <div class="article-content">
+        {{CONTENT}}
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© AVIA STUDIO</p>
+  </footer>
+</body>
+</html>
