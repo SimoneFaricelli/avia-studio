@@ -127,13 +127,13 @@ if (!fs.existsSync(articlesDirectory)) {
 
 if (!fs.existsSync(articleTemplatePath)) {
   throw new Error(
-    "Missing public/blog/templates/article-template.html"
+    "Missing /blog/templates/article-template.html"
   );
 }
 
 if (!fs.existsSync(indexTemplatePath)) {
   throw new Error(
-    "Missing public/blog/templates/index-template.html"
+    "Missing /blog/templates/index-template.html"
   );
 }
 
@@ -247,7 +247,7 @@ const articleCards = articles
   .map((article) => {
     return `
       <article class="article-card">
-        <a href="public/blog/articles/${article.slug}.html">
+        <a href="/blog/articles/${article.slug}.html">
           <img
             src="${escapeHtml(article.image)}"
             alt="${escapeHtml(article.title)}"
