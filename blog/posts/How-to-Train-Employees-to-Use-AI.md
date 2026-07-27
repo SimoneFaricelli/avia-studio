@@ -3,7 +3,7 @@ title: "How to Train Employees to Use AI: A Practical Guide for Companies"
 description: "Discover how companies can successfully train employees to use AI with personalized learning paths that improve productivity and accelerate AI adoption."
 date: "2026-07-27"
 category: "AI Training"
-image: "/blog/images/how-to-train-employees-ai.jpg"
+image: "/blog/images/How- to-Train-Employees-to-Use-AI.png"
 ---
 
 Artificial intelligence is transforming the workplace, but simply giving employees access to AI tools is not enough.
