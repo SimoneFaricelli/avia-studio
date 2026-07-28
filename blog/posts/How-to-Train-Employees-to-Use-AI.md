@@ -55,4 +55,8 @@ Personalized AI training helps organizations improve adoption, increase producti
 Companies that invest in practical AI education today will be better prepared for tomorrow's workplace.
 
 Looking for a more practical approach to AI training? Discover how Tutor AI Enterprise helps companies create personalized AI learning paths for every employee.
+
+👉 [https://aviastudio.group/products/tutor-ai](https://aviastudio.group/products/tutor-ai).
+
+Looking for a more practical approach to AI training? Discover how Tutor AI Enterprise helps companies create personalized AI learning paths for every employee.
 👉 https://aviastudio.group/products/tutor-ai.
