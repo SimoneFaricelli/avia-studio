@@ -3,7 +3,7 @@ title: "What Is Enterprise AI Training? The Complete Guide for Modern Companies"
 description: "Learn what Enterprise AI Training is, why it matters, and how organizations can successfully train employees to adopt AI across every department."
 date: "2026-08-03"
 category: "Enterprise AI"
-image: "/blog/images/enterprise-ai-training-guide.jpg"
+image: "/blog/images/What-Is-Enterprise-AI-Training.png"
 ---
 
 Artificial intelligence is transforming every industry.
