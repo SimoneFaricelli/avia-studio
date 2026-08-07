@@ -3,7 +3,7 @@ title: "Corporate AI Training Programs: How to Build One That Employees Actually
 description: "Learn how to build effective corporate AI training programs that help employees develop practical AI skills, improve adoption and apply AI in their everyday work."
 date: "2026-08-07"
 category: "Corporate Training"
-image: "/blog/images/Corporate-Ai-Training-Programs.png"
+image: "/blog/images/Corporate-AI-Training-Programs.png"
 ---
 
 Artificial intelligence is becoming part of everyday work.
