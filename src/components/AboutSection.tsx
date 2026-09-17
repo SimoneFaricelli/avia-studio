@@ -27,11 +27,9 @@ const AboutSection = () => {
           >
             <h3 className="text-xl font-semibold text-foreground">Our Story</h3>
             <p className="text-muted-foreground leading-relaxed">
-              AVIA STUDIO was born from a bold vision: build AI-powered
-              products that create real value for businesses. Founded by a
-              16-year-old entrepreneur with Italian heritage, we're building
-              the next generation of business software powered by artificial
-              intelligence.
+              AVIA Studio is a technology company focused on building AI-powered software for businesses.
+              We design products that help organizations improve productivity, streamline processes and integrate artificial intelligence into everyday work.
+              Our approach combines AI, product development and practical business needs to build software designed for real-world use.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               We combine artificial intelligence, product thinking and
@@ -56,14 +54,13 @@ const AboutSection = () => {
                     Founder & CEO
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Visionary Leader
+                    Strategy & Product
                   </p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                At just 16, our CEO brings fresh perspectives and fearless
-                innovation to the tech industry. Italian by origin, global by
-                ambition.
+                Leads AVIA Studio’s strategy, product direction and business development,
+                with a focus on building AI products that solve practical business problems.
               </p>
             </div>
 
@@ -82,14 +79,13 @@ const AboutSection = () => {
                     COO & Lead Developer
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Technical Excellence
+                    Operations & Engineering
                   </p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Our COO combines operational expertise with hands-on development
-                skills, ensuring every project is delivered with precision and
-                quality.
+               Leads operations and software development at AVIA Studio,
+               overseeing the technical execution and delivery of our products.
               </p>
             </div>
           </div>
