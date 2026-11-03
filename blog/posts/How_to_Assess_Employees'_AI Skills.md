@@ -1,5 +1,4 @@
-
----
+﻿---
 title: "How to Assess Employees' AI Skills: 5 Practical Tests for the Workplace"
 description: "Learn how to assess employees' AI skills with five practical workplace tests, a scoring rubric and examples for evaluating real AI capabilities."
 date: "2026-10-27"
@@ -118,11 +117,11 @@ Include two or three deliberate errors in the summary.
 
 For example, the source document might state:
 
-"The project will begin on November 12 and has an approved budget of €18,000."
+"The project will begin on November 12 and has an approved budget of â‚¬18,000."
 
 The AI-generated summary might incorrectly state:
 
-"The project begins on November 10 with a budget of €25,000."
+"The project begins on November 10 with a budget of â‚¬25,000."
 
 Ask the employee to:
 
@@ -310,9 +309,9 @@ Consider three fictional employees.
 
 | Employee | Prompting | Evaluation | Responsible Use | Practical Application | Workflow Integration |
 |---|---:|---:|---:|---:|---:|
-| Alex — Sales | 2 | 1 | 2 | 2 | 1 |
-| Jordan — HR | 2 | 3 | 3 | 1 | 1 |
-| Taylor — Finance | 3 | 1 | 2 | 2 | 2 |
+| Alex â€” Sales | 2 | 1 | 2 | 2 | 1 |
+| Jordan â€” HR | 2 | 3 | 3 | 1 | 1 |
+| Taylor â€” Finance | 3 | 1 | 2 | 2 | 2 |
 
 These numbers are illustrative, not real assessment results.
 
